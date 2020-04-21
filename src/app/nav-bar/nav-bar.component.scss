@@ -1,0 +1,18 @@
+.mat-nav-list .mat-list-item:hover{
+    background: #e8f0fe;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.mat-list-base .mat-list-item{
+    letter-spacing: .01785714em;
+    font-family: 'Google Sans', Roboto,Arial,sans-serif;
+    font-size: .875rem;
+    font-weight: 500;
+    color: #616161;
+}
+::ng-deep .mat-list-item-content .menu-name {
+    margin-left: 15px;
+}
+::ng-deep .mat-list-item-content .menu-icon {
+    color: #969696;
+}
