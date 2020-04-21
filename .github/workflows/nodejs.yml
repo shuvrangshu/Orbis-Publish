@@ -24,6 +24,11 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run build --if-present
-    
+    - name: Deploy
+      uses: s0/git-publish-subdir-action@master
       env:
         CI: true
+        REPO: self
+        BRANCH: gh-pages
+        FOLDER: public/site
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
