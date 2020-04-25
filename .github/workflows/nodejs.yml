@@ -28,7 +28,7 @@ jobs:
       uses: s0/git-publish-subdir-action@master
       env:
         CI: true
-        REPO: git@github.com:shuvrangshu/Orbis-Publish.git
+        REPO: self
         BRANCH: gh-pages
         FOLDER: dist/orbis-client
-        SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
