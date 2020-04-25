@@ -1,0 +1,454 @@
+<div class="container">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Mix Design</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-horizontal-stepper labelPosition="bottom" linear="false" #stepper>
+        <mat-step [stepControl]="firstFormGroup">
+          <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>STIPULATIONS FOR PROPORTIONING</ng-template>
+            <!-- <mat-form-field>
+              <mat-label>Name</mat-label>
+              <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperNext>Next</button>
+            </div>-->
+            <div fxLayout='column' fxLayoutGap="20px" class="pd-t-20">
+              <div fxFlex>
+                <div fxFlex="40%" dir="rtl" fxFlexAlign="center" class="pd-r-15">
+                  Grade Designation (M)
+                </div>
+                <div fxFlex="60%">
+                  <mat-form-field>
+                    <mat-label>Select an option</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="40%" dir="rtl" fxFlexAlign="center" class="pd-r-15">Type of Cement </div>
+                <div fxFlex="60%">
+                  <mat-checkbox>Check me!</mat-checkbox>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="40%" dir="rtl" fxFlexAlign="center" class="pd-r-15">Type of mineral admixture</div>
+                <div fxFlex="60%">
+                  <mat-form-field>
+                    <mat-label>Select an option</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="40%" dir="rtl" fxFlexAlign="center" class="pd-r-15">Maximum Nominal size of the aggregate
+                </div>
+                <div fxFlex="60%">
+                  <mat-form-field>
+                    <mat-label>Select an option</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="40%" dir="rtl" fxFlexAlign="center" class="pd-r-15">Minimum Cement Content and Maximum
+                  water-Cement ratio to be adopted
+                  and/or
+                  Exposure conditions as per Table-3 of IS 456</div>
+                <div fxFlex="60%">
+                  <mat-form-field>
+                    <mat-label>Select an option</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="40%" dir="rtl" fxFlexAlign="center" class="pd-r-15">Workibility</div>
+                <div fxFlex="60%">
+                  <mat-form-field>
+                    <mat-label>Select an option</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="40%" dir="rtl" fxFlexAlign="center" class="pd-r-15">Method of Concrete Placing</div>
+                <div fxFlex="60%">
+                  <mat-form-field>
+                    <mat-label>Select an option</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="40%" dir="rtl" fxFlexAlign="center" class="pd-r-15">Degree of Site Control </div>
+                <div fxFlex="60%">
+                  <mat-form-field>
+                    <mat-label>Select an option</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="40%" dir="rtl" fxFlexAlign="center" class="pd-r-15">Type of aggregate</div>
+                <div fxFlex="60%">
+                  <mat-form-field>
+                    <mat-label>Select an option</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="40%" dir="rtl" fxFlexAlign="center" class="pd-r-15">Maximum Cement Content (OPC content)
+                </div>
+                <div fxFlex="60%">
+                  <mat-form-field>
+                    <mat-label>Select an option</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="40%" dir="rtl" fxFlexAlign="center" class="pd-r-15">Chemical Admixture Type</div>
+                <div fxFlex="60%">
+                  <mat-form-field>
+                    <mat-label>Select an option</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="50%" dir="ltr">
+
+                </div>
+                <div fxFlex="50%" dir="rtl">
+                  <button mat-raised-button color="primary" matStepperNext>Next</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup">
+          <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>TEST DATA FOR MATERIALS</ng-template>
+            <div fxLayout='column' fxLayoutGap="20px" class="pd-t-20">
+              <div fxFlex>
+                <div fxFlex="40%" dir="rtl" fxFlexAlign="center" class="pd-r-15">
+                  Cement Used (OPC)
+                </div>
+                <div fxFlex="60%">
+                  <mat-form-field>
+                    <mat-label>Select an option</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="40%" dir="rtl" fxFlexAlign="center" class="pd-r-15">Specific Gravity of Cement</div>
+                <div fxFlex="60%">
+                  <mat-form-field>
+                    <mat-label>Select an option</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="40%" dir="rtl" fxFlexAlign="center" class="pd-r-15">Fly ash</div>
+                <div fxFlex="60%">
+                  <mat-form-field>
+                    <mat-label>Select an option</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="40%" dir="rtl" fxFlexAlign="center" class="pd-r-15">Specific Gravity of Fly ash</div>
+                <div fxFlex="60%">
+                  <mat-form-field>
+                    <mat-label>Select an option</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="40%" dir="rtl" fxFlexAlign="center" class="pd-r-15">Chemical Admixture</div>
+                <div fxFlex="60%">
+                  <mat-form-field>
+                    <mat-label>Select an option</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="100%" dir="ltr" fxFlexAlign="center">
+                  <h2>Specific Gravity of</h2>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="40%" fxFlexAlign="center" class="pd-r-15 align-right">1. Coarse Grregate [at saturated
+                  surface dry (SSD) condition]</div>
+                <div fxFlex="60%">
+                  <mat-form-field>
+                    <mat-label>Select an option</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="40%" fxFlexAlign="center" class="pd-r-15 align-right">2. FIne Grregate [at saturated
+                  surface dry (SSD) condition]</div>
+                <div fxFlex="60%">
+                  <mat-form-field>
+                    <mat-label>Select an option</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="40%" fxFlexAlign="center" class="pd-r-15 align-right">3. Chemical admixture</div>
+                <div fxFlex="60%">
+                  <mat-form-field>
+                    <mat-label>Select an option</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="100%" dir="ltr" fxFlexAlign="center">
+                  <h2>Water absorption</h2>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="40%" fxFlexAlign="center" class="pd-r-15 align-right">1. Coarse Aggregate</div>
+                <div fxFlex="60%">
+                  <mat-form-field>
+                    <mat-label>Select an option</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="40%" fxFlexAlign="center" class="pd-r-15 align-right">2. Fine Aggregate</div>
+                <div fxFlex="60%">
+                  <mat-form-field>
+                    <mat-label>Select an option</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="100%" dir="ltr" fxFlexAlign="center">
+                  <h2>Moisture Content of aggregate [As per IS 2386 (part(3)</h2>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="40%" fxFlexAlign="center" class="pd-r-15 align-right">1. Coarse Aggregate</div>
+                <div fxFlex="60%">
+                  <mat-form-field>
+                    <mat-label>Select an option</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="40%" fxFlexAlign="center" class="pd-r-15 align-right">2. Fine Aggregate</div>
+                <div fxFlex="60%">
+                  <mat-form-field>
+                    <mat-label>Select an option</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="100%" dir="ltr" fxFlexAlign="center">
+                  <h2>Free Surface Moisture</h2>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="40%" fxFlexAlign="center" class="pd-r-15 align-right">1. Coarse Aggregate</div>
+                <div fxFlex="60%">
+                  <mat-form-field>
+                    <mat-label>Select an option</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="40%" fxFlexAlign="center" class="pd-r-15 align-right">2. Fine Aggregate</div>
+                <div fxFlex="60%">
+                  <mat-form-field>
+                    <mat-label>Select an option</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="100%" dir="ltr" fxFlexAlign="center">
+                  <h2>Seive analysis</h2>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="40%" fxFlexAlign="center" class="pd-r-15 align-right">1. Coarse Aggregate</div>
+                <div fxFlex="60%">
+                  <mat-form-field>
+                    <mat-label>Select an option</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="40%" fxFlexAlign="center" class="pd-r-15 align-right">2. Fine Aggregate</div>
+                <div fxFlex="60%">
+                  <mat-form-field>
+                    <mat-label>Select an option</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="50%" dir="ltr">
+                  <button mat-stroked-button color="primary" matStepperPrevious>Back</button>
+                </div>
+                <div fxFlex="50%" dir="rtl">
+                  <button mat-raised-button color="primary">Save</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </mat-step>
+      </mat-horizontal-stepper>
+    </mat-card-content>
+  </mat-card>
+</div>

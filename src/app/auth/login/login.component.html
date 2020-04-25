@@ -1,0 +1,53 @@
+<div fxLayout='column'>
+    <div fxFlex>
+        <div fxFlex="65%">
+            <div fxLayout='column'>
+                <div fxFlex>
+                    <div fxFlex="100%" fxFlexAlign="center" class="login-title">
+                        <h1>ORBIS</h1>
+                    </div>
+
+                </div>
+                <div fxFlex>
+                    <div fxFlex="100%" fxFlexAlign="center" class="login-banner-img">
+                        <img src="../../../assets/login_bg1.png">
+                        <div class="bannner-title">
+                            Desk to perform more on your work
+                        </div>
+                        <div class="bannner-title-small">
+                            Get ready for your presence to make sense
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div fxFlex="35%">
+            <div class="login-area">
+                <div class="login-area-heading">
+                    Welcome!
+                </div>
+                <div class="login-area-heading-sub">
+                  Sign in to your account
+                </div>
+                <div class="login-text-placeholder">
+                    <div class="login-text-lable">Username</div>
+                    <div class="login-text">
+                        <span><mat-icon>person</mat-icon></span>
+                            <input type="text" />
+                    </div>
+                </div>
+                <div>
+                    <div class="login-text-lable">Password</div>
+                    <div class="login-text">
+                        <span><mat-icon>lock</mat-icon></span>
+                            <input type="password" />
+                    </div>
+                </div>
+                <div class="login-btn-area">
+                    <button mat-raised-button color="primary" (click)="onSignIn()" >Login</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

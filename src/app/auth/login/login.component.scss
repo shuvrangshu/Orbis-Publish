@@ -1,0 +1,90 @@
+.login-area{
+    height: 100vh;
+    background: #4c56c0;
+    .login-text { 
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+        width: 380px;
+        background: #3c46a7;
+        border-radius: 5px;
+      }
+      .login-text  span { 
+        position: absolute;
+        top: 12px;
+        left: 11px;
+        color: #b6c0fb;
+      }
+      
+      input {
+        width: 314px;
+        padding: 5px;
+        margin-left: 29px;
+        height: 35px;
+        outline: none;
+        background: transparent;
+        border: 0px;
+        color: #FFF;
+      }
+      .login-area-heading {
+        font-size: 30px;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 300;
+        color: #e8e8e8;
+        padding: 30px;
+        text-align: center;
+        padding-top: 75px;
+    }
+    .login-area-heading-sub {
+        font-size: 18px;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 300;
+        color: #ced4f5;
+        text-align: center;
+    }
+    .login-text-lable{
+        padding: 10px;
+        color: #FFF;
+        font-size: 16px;
+        font-weight: 500;
+        padding-left: 75px;
+    }
+    .login-text-placeholder{
+        position: relative;
+        margin-top: 70px;
+    }
+    .login-btn-area{
+        text-align: center;
+        padding: 50px;
+        & button{
+            box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(233,30,99,.4);
+            width: 380px;
+            background: linear-gradient(60deg,#ec407a,#d81b60);
+            border-radius: 30px;
+            padding: 4px;
+        }
+    }
+}
+.login-title{
+    padding: 30px;
+    color: #595e77;
+}
+.login-banner-img{
+    text-align: center;
+    & img{
+        width: 500px;
+    }
+    .bannner-title {
+        font-size: 35px;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 300;
+        color: #3F51B5;
+        padding: 30px;
+    }
+    .bannner-title-small {
+        font-size: 20px;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 300;
+        color: #607D8B;
+    }
+}
