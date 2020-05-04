@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MixDesignService } from './services/mix-design.service';
+import { Codelists, CodeList } from './Models/code-list';
+import { of } from 'rxjs';
 
 @Component({
   selector: 'o-mix-design',
@@ -10,9 +13,16 @@ export class MixDesignComponent implements OnInit {
   isLinear = false;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
-  constructor(private _formBuilder: FormBuilder) { }
+
+  ddCodeList = {};
+
+  constructor(private _formBuilder: FormBuilder, private mixService: MixDesignService) { }
+
 
   ngOnInit(): void {
+    this.mixService.getCodeList().subscribe((data) => {
+      this.populateDropDownList(data);
+    });
     this.firstFormGroup = this._formBuilder.group({
       firstCtrl: ['', Validators.required]
     });
@@ -20,5 +30,12 @@ export class MixDesignComponent implements OnInit {
       secondCtrl: ['', Validators.required]
     });
   }
+
+  private populateDropDownList(data: Codelists[]) {
+    data.forEach((list => {
+      this.ddCodeList[list.code_list_name] = list.code_list;
+    }));
+  }
+
 
 }

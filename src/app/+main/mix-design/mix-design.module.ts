@@ -14,6 +14,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MixDesignRoutingModule } from './mix-design-routing.module';
 import { MixDesignComponent } from './mix-design.component';
 
+import { MixDesignService } from './services/mix-design.service';
+
+
 @NgModule({
   declarations: [MixDesignComponent],
   imports: [
@@ -30,6 +33,7 @@ import { MixDesignComponent } from './mix-design.component';
     FormsModule,
     ReactiveFormsModule,
     MixDesignRoutingModule
-  ]
+  ],
+  providers: [MixDesignService]
 })
 export class MixDesignModule { }

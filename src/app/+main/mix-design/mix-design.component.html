@@ -22,32 +22,35 @@
                 </div>
                 <div fxFlex="60%">
                   <mat-form-field>
-                    <mat-label>Select an option</mat-label>
-                    <mat-select>
-                      <mat-option>None</mat-option>
-                      <mat-option value="option1">Option 1</mat-option>
-                      <mat-option value="option2">Option 2</mat-option>
-                      <mat-option value="option3">Option 3</mat-option>
-                    </mat-select>
+                    <mat-label>Enter Grade Designation</mat-label>
+                    <input matInput placeholder="Ex. 0 < value <= 80" value="" type="number">
                   </mat-form-field>
                 </div>
               </div>
               <div fxFlex>
-                <div fxFlex="40%" dir="rtl" fxFlexAlign="center" class="pd-r-15">Type of Cement </div>
+                <div fxFlex="40%" dir="rtl" fxFlexAlign="center" class="pd-r-15">Grade of cement</div>
                 <div fxFlex="60%">
-                  <mat-checkbox>Check me!</mat-checkbox>
+                  <mat-form-field>
+                    <mat-label>Select a Grade Value</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option *ngFor="let list of ddCodeList['grade_cement']" value="list.value">
+                        {{list.name}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
                 </div>
               </div>
               <div fxFlex>
                 <div fxFlex="40%" dir="rtl" fxFlexAlign="center" class="pd-r-15">Type of mineral admixture</div>
                 <div fxFlex="60%">
                   <mat-form-field>
-                    <mat-label>Select an option</mat-label>
+                    <mat-label>Select a type</mat-label>
                     <mat-select>
                       <mat-option>None</mat-option>
-                      <mat-option value="option1">Option 1</mat-option>
-                      <mat-option value="option2">Option 2</mat-option>
-                      <mat-option value="option3">Option 3</mat-option>
+                      <mat-option *ngFor="let list of ddCodeList['type_mineral_admixture']" value="list.value">
+                        {{list.name}}
+                      </mat-option>
                     </mat-select>
                   </mat-form-field>
                 </div>
@@ -60,11 +63,12 @@
                     <mat-label>Select an option</mat-label>
                     <mat-select>
                       <mat-option>None</mat-option>
-                      <mat-option value="option1">Option 1</mat-option>
-                      <mat-option value="option2">Option 2</mat-option>
-                      <mat-option value="option3">Option 3</mat-option>
+                      <mat-option *ngFor="let list of ddCodeList['nominal_size_aggregate']" value="list.value">
+                        {{list.name}}
+                      </mat-option>
                     </mat-select>
                   </mat-form-field>
+                  <span class="unit">mm</span>
                 </div>
               </div>
               <div fxFlex>
@@ -77,9 +81,9 @@
                     <mat-label>Select an option</mat-label>
                     <mat-select>
                       <mat-option>None</mat-option>
-                      <mat-option value="option1">Option 1</mat-option>
-                      <mat-option value="option2">Option 2</mat-option>
-                      <mat-option value="option3">Option 3</mat-option>
+                      <mat-option *ngFor="let list of ddCodeList['exposure_conditions']" value="list.value">
+                        {{list.name}}
+                      </mat-option>
                     </mat-select>
                   </mat-form-field>
                 </div>
@@ -88,13 +92,8 @@
                 <div fxFlex="40%" dir="rtl" fxFlexAlign="center" class="pd-r-15">Workibility</div>
                 <div fxFlex="60%">
                   <mat-form-field>
-                    <mat-label>Select an option</mat-label>
-                    <mat-select>
-                      <mat-option>None</mat-option>
-                      <mat-option value="option1">Option 1</mat-option>
-                      <mat-option value="option2">Option 2</mat-option>
-                      <mat-option value="option3">Option 3</mat-option>
-                    </mat-select>
+                    <mat-label>Enter Workibility</mat-label>
+                    <input matInput placeholder="Ex. value <= 200" value="" type="number">
                   </mat-form-field>
                 </div>
               </div>
@@ -105,9 +104,9 @@
                     <mat-label>Select an option</mat-label>
                     <mat-select>
                       <mat-option>None</mat-option>
-                      <mat-option value="option1">Option 1</mat-option>
-                      <mat-option value="option2">Option 2</mat-option>
-                      <mat-option value="option3">Option 3</mat-option>
+                      <mat-option *ngFor="let list of ddCodeList['method_concrete_placing']" value="list.value">
+                        {{list.name}}
+                      </mat-option>
                     </mat-select>
                   </mat-form-field>
                 </div>
@@ -119,9 +118,9 @@
                     <mat-label>Select an option</mat-label>
                     <mat-select>
                       <mat-option>None</mat-option>
-                      <mat-option value="option1">Option 1</mat-option>
-                      <mat-option value="option2">Option 2</mat-option>
-                      <mat-option value="option3">Option 3</mat-option>
+                      <mat-option *ngFor="let list of ddCodeList['degree_site_control']" value="list.value">
+                        {{list.name}}
+                      </mat-option>
                     </mat-select>
                   </mat-form-field>
                 </div>
@@ -133,26 +132,23 @@
                     <mat-label>Select an option</mat-label>
                     <mat-select>
                       <mat-option>None</mat-option>
-                      <mat-option value="option1">Option 1</mat-option>
-                      <mat-option value="option2">Option 2</mat-option>
-                      <mat-option value="option3">Option 3</mat-option>
+                      <mat-option *ngFor="let list of ddCodeList['type_aggregate']" value="list.value">
+                        {{list.name}}
+                      </mat-option>
                     </mat-select>
                   </mat-form-field>
                 </div>
               </div>
-              <div fxFlex>
-                <div fxFlex="40%" dir="rtl" fxFlexAlign="center" class="pd-r-15">Maximum Cement Content (OPC content)
+                 <div fxFlex>
+                <div fxFlex="40%" dir="rtl" fxFlexAlign="center" class="pd-r-15">Maximum Cement Content
                 </div>
                 <div fxFlex="60%">
                   <mat-form-field>
-                    <mat-label>Select an option</mat-label>
-                    <mat-select>
-                      <mat-option>None</mat-option>
-                      <mat-option value="option1">Option 1</mat-option>
-                      <mat-option value="option2">Option 2</mat-option>
-                      <mat-option value="option3">Option 3</mat-option>
-                    </mat-select>
+                    <mat-label>Enter Cement Content</mat-label>
+                    <input matInput placeholder="Maximum Cement Content" value="IS456">
+                    
                   </mat-form-field>
+                  <span class="unit">Kg/m3</span>
                 </div>
               </div>
               <div fxFlex>
@@ -162,9 +158,23 @@
                     <mat-label>Select an option</mat-label>
                     <mat-select>
                       <mat-option>None</mat-option>
-                      <mat-option value="option1">Option 1</mat-option>
-                      <mat-option value="option2">Option 2</mat-option>
-                      <mat-option value="option3">Option 3</mat-option>
+                      <mat-option *ngFor="let list of ddCodeList['chemical_admixture_type']" value="list.value">
+                        {{list.name}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxFlex>
+                <div fxFlex="40%" dir="rtl" fxFlexAlign="center" class="pd-r-15">Type of Concrete</div>
+                <div fxFlex="60%">
+                  <mat-form-field>
+                    <mat-label>Select an option</mat-label>
+                    <mat-select>
+                      <mat-option>None</mat-option>
+                      <mat-option *ngFor="let list of ddCodeList['type_concrete']" value="list.value">
+                        {{list.name}}
+                      </mat-option>
                     </mat-select>
                   </mat-form-field>
                 </div>
