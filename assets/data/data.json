@@ -1,0 +1,171 @@
+[
+    {
+        "code_list_name": "grade_cement",
+        "code_list": [
+            {
+                "name": "33",
+                "value": "33"
+            },
+            {
+                "name": "43",
+                "value": "43"
+            },
+            {
+                "name": "53",
+                "value": "53"
+            }
+        ]
+    },
+    {
+        "code_list_name": "type_mineral_admixture",
+        "code_list": [
+            {
+                "name": "Fly Ash",
+                "value": "Fly Ash"
+            },
+            {
+                "name": "GGBS",
+                "value": "GGBS"
+            },
+            {
+                "name": "Silica Fume",
+                "value": "Silica Fume"
+            }
+        ]
+    },
+    {
+        "code_list_name": "nominal_size_aggregate",
+        "code_list": [
+            {
+                "name": "10",
+                "value": "10"
+            },
+            {
+                "name": "20",
+                "value": "20"
+            },
+            {
+                "name": "40",
+                "value": "40"
+            }
+        ]
+    },
+    {
+        "code_list_name": "exposure_conditions",
+        "code_list": [
+            {
+                "name": "Mild",
+                "value": "Mild"
+            },
+            {
+                "name": "Moderate",
+                "value": "Moderate"
+            },
+            {
+                "name": "Severe",
+                "value": "Severe"
+            },
+            {
+                "name": "Very severe",
+                "value": "Very severe"
+            },
+            {
+                "name": "Extreme",
+                "value": "Extreme"
+            }
+        ]
+    },
+    {
+        "code_list_name": "method_concrete_placing",
+        "code_list": [
+            {
+                "name": "Pumpable",
+                "value": "Pumpable"
+            },
+            {
+                "name": "Chute",
+                "value": "Chute"
+            },
+            {
+                "name": "Manual",
+                "value": "Manual"
+            }
+        ]
+    },
+    {
+        "code_list_name": "degree_site_control",
+        "code_list": [
+            {
+                "name": "Good",
+                "value": "Good"
+            },
+            {
+                "name": "Bad",
+                "value": "Bad"
+            },
+            {
+                "name": "Any",
+                "value": "Any"
+            }
+        ]
+    },
+    {
+        "code_list_name": "type_aggregate",
+        "code_list": [
+            {
+                "name": "Crushed Anguler Aggregate",
+                "value": "Crushed Anguler Aggregate"
+            },
+            {
+                "name": "Sub-angular",
+                "value": "Sub-angular"
+            },
+            {
+                "name": "Gravel",
+                "value": "Gravel"
+            },
+            {
+                "name": "Rounded Gravel",
+                "value": "Rounded Gravel"
+            }
+        ]
+    },
+    {
+        "code_list_name": "chemical_admixture_type",
+        "code_list": [
+            {
+                "name": "Super plasticiser - normal",
+                "value": "Super plasticiser - normal"
+            },
+            {
+                "name": "Plasticiser",
+                "value": "Plasticiser"
+            },
+            {
+                "name": "Polycarboxylate ether based",
+                "value": "Polycarboxylate ether based"
+            },
+            {
+                "name": "Other",
+                "value": "Other"
+            },
+            {
+                "name": "No",
+                "value": "No"
+            }
+        ]
+    },
+    {
+        "code_list_name": "type_concrete",
+        "code_list": [
+            {
+                "name": "PCC",
+                "value": "PCC"
+            },
+            {
+                "name": "RCC",
+                "value": "RCC"
+            }
+        ]
+    }
+]
